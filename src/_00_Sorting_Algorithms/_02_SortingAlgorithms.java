@@ -18,7 +18,7 @@ import javax.swing.JOptionPane;
 
 public class _02_SortingAlgorithms {
 	public static void main(String[] args) {
-		String[] options = new String[] {"Bogo", "Heap", "Merge", "Quick","Insertion","Selection", "Bubble"};
+		String[] options = new String[] {"Bogo", "Quick","Insertion", "Bubble"};
 		int input = JOptionPane.showOptionDialog(null, "Choose a sorting algorithm to visualize", "Sorting Algorithms", 0, 
 				-1, null, options, 0);
 		
@@ -29,24 +29,12 @@ public class _02_SortingAlgorithms {
 			new SortingVisualizer(new BubbleSorter());
 			break;
 		}
-		case "Selection":{
-			new SortingVisualizer(new SelectionSorter());
-			break;
-		}
 		case "Insertion":{
 			new SortingVisualizer(new InsertionSorter());
 			break;
 		}
 		case "Quick":{
 			new SortingVisualizer(new QuickSorter());
-			break;
-		}
-		case "Merge":{
-			new SortingVisualizer(new MergeSorter());
-			break;
-		}
-		case "Heap":{
-			new SortingVisualizer(new HeapSorter());
 			break;
 		}
 		case "Bogo":{

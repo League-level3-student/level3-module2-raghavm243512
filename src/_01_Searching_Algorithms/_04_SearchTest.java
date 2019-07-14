@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 class _04_SearchTest {
 
 	// A MINIMUM OF 3 TESTS ARE REQUIRED FOR EACH METHOD
-	int[] a = {1,2,3,4,5,6,7,8,9};
+	int[] a = {1,2,3,4,7,8,9,10,11};
 	String[] words = {"f", "d", "s", "a"};
 	@Test
 	public void testLinearSearch() {
@@ -22,9 +22,9 @@ class _04_SearchTest {
 	public void testBinarySearch() {
 		//2. use the assertEquals method to test your binary search method.
 		//   remember that the array must be sorted
-		assertEquals(5, _01_BinarySearch.binarySearch(a, 0, a.length, 5));
-		assertEquals(1, _01_BinarySearch.binarySearch(a, 0, a.length, 1));
-		assertEquals(9, _01_BinarySearch.binarySearch(a, 0, a.length, 9));
+		assertEquals(4, _01_BinarySearch.binarySearch(a, 0, a.length, 7));
+		assertEquals(0, _01_BinarySearch.binarySearch(a, 0, a.length, 1));
+		assertEquals(6, _01_BinarySearch.binarySearch(a, 0, a.length, 9));
 		
 	}
 	
@@ -32,17 +32,17 @@ class _04_SearchTest {
 	public void testInterpolationSearch() {
 		//3. use the assertEquals method to test your interpolation search method.
 		//   remember that the array must be sorted and evenly distributed
-		assertEquals(4, _02_InterpolationSearch.interpolationSearch(a, 5));
+		assertEquals(4, _02_InterpolationSearch.interpolationSearch(a, 7));
 		assertEquals(0, _02_InterpolationSearch.interpolationSearch(a, 1));
-		assertEquals(8, _02_InterpolationSearch.interpolationSearch(a, 9));
+		assertEquals(8, _02_InterpolationSearch.interpolationSearch(a, 11));
 	}
 	
 	@Test
 	public void testExponentialSearch() {
 		//4. use the assertEquals method to test your exponential search method.
 		//   remember that the array must be sorted
-		assertEquals(4, _03_ExponentialSearch.exponentialSearch(a, 5));
+		assertEquals(4, _03_ExponentialSearch.exponentialSearch(a, 7));
 		assertEquals(0, _03_ExponentialSearch.exponentialSearch(a, 1));
-		assertEquals(8, _03_ExponentialSearch.exponentialSearch(a, 9));
+		assertEquals(8, _03_ExponentialSearch.exponentialSearch(a, 11));
 	}
 }
